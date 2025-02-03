@@ -1,4 +1,5 @@
 import { Text, View, StyleSheet } from "react-native";
+import { styles } from "../../global" ;
 
 export default function Cookies() {
   return (
@@ -8,17 +9,3 @@ export default function Cookies() {
   );
 }
 
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#25292e",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  text: {
-    color: "#49f",
-    fontSize: 28,
-  },
-});
