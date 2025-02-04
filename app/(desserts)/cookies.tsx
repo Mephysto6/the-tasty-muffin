@@ -1,5 +1,5 @@
 import { Text, View, StyleSheet } from "react-native";
-import { styles } from "../../global" ;
+import { styles } from "@/global" ;
 
 export default function Cookies() {
   return (

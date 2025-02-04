@@ -1,6 +1,6 @@
 import { Text, View, StyleSheet } from "react-native";
 import { Link } from "expo-router";
-import { styles } from "../../global" ;
+import { styles } from "@/global" ;
 
 export default function Search() {
     return (
@@ -8,10 +8,10 @@ export default function Search() {
         <Text style={styles.text}>
           Search for a dessert
         </Text>
-        <Link href="/cookies" style={styles.button}>
+        <Link href="/cookies" style={styles.buttonS}>
           COOKIES
         </Link>
-        <Link href="/muffins" style={styles.button}>
+        <Link href="/muffins" style={styles.buttonS}>
           MUFFINS
         </Link>
       </View>
