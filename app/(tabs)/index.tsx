@@ -1,27 +1,25 @@
-import { Text, View, StyleSheet, ScrollView } from "react-native";
+import { Text, View, StyleSheet, ScrollView, Pressable } from "react-native";
 import { Link } from "expo-router";
 import { styles } from "@/global" ;
 import ImageViewer from "@/components/ImageViewer";
 import Button from "@/components/Button";
 import React, { useEffect } from "react";
 // import { Link as scrollLink, animateScroll as scroll } from "react-scroll";
-import { DessertList } from "@/assets/images/desserts/index"
+import { DessertPathList, DessertImgList } from "@/assets/images/desserts/index"
+import DessertImage from "@/components/DessertImage"
 
-const path = "@/assets/images/react-logo.png" ;
-const PlaceholderImage = require(path);
+// const path = "@/assets/images/react-logo.png" ;
+// const PlaceholderImage = require(path);
 
 export default function Index() {
   useEffect(() => {
     document.title = "The Tasty Muffin";
   }, []);
-  const dessert_list:string[] = ["cookies", "muffins"] ;
+
   const dessert_images = [] ;
-  
-  for (let i=0 ; i < DessertList.length ; i++) {
+  for (let i=0 ; i < DessertPathList.length ; i++) {
     dessert_images.push(
-      <View style={styles.imageContainer}>
-        <ImageViewer imgSource={DessertList[i]} />
-      </View>
+      <DessertImage name={DessertPathList[i]} image={DessertImgList[i]} />
     )
   }
 
@@ -33,8 +31,8 @@ export default function Index() {
       </Text>
       <Text style={styles.text}>
         This website serves as a portfolio of my desserts. Feel free to browse.<br/>
-        /!\ very much still under construction /!\
         {/* , and when you feel like it, add some to your cart and order ! */}
+        /!\ very much still under construction /!\
       </Text>
 
       {dessert_images}

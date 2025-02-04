@@ -41,14 +41,18 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     textDecorationLine: "underline",
     color: "#fff",
+    textAlign: "center",
   },
   buttonM: {
+    fontSize: 30,
     borderRadius: 10,
     width: "100%",
     height: "100%",
     alignItems: "center",
     justifyContent: "center",
+    textAlign: "center",
     flexDirection: "row",
+    color: "#ccc",
   },
   buttonLabel: {
     color: "#fff",
