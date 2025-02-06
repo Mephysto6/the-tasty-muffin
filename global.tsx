@@ -65,4 +65,23 @@ export const styles = StyleSheet.create({
     // flex: 1 / 3,
     alignItems: "center",
   },
+
+  // tags
+  tagContainer: {
+    // width: 320,
+    // height: 68,
+    marginHorizontal: 20,
+    // alignItems: "center",
+    // justifyContent: "center",
+    padding: 3,
+  },
+  tagButton: {
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+  },
+  tagLabel: {
+    color: "#fff",
+    fontSize: 16,
+  },
 });
