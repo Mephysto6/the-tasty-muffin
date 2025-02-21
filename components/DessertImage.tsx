@@ -4,7 +4,7 @@ import { styles } from "@/global";
 import { ExternalPathString, Link, RelativePathString } from 'expo-router';
 import React from 'react';
 import ImageViewer from "@/components/ImageViewer";
-import { DessertPathList, DessertImgList } from "@/assets/images/desserts/index"
+import { DessertsList, DessertImgList } from "@/assets/images/desserts/index"
 import { ImageSource } from 'expo-image';
 
 type Props = {

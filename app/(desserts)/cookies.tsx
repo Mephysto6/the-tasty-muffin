@@ -1,11 +1,25 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, ScrollView } from "react-native";
 import { styles } from "@/global" ;
+import { testing_cookies, CookiesImgs } from "@/assets/images/desserts/cookies" ;
+import DessertImage from "@/components/DessertImage";
+import ImageViewer from "@/components/ImageViewer";
+
+
 
 export default function Cookies() {
+  
+  var dessert_images : Array<any> = [];
+  for (var image of CookiesImgs) {
+    dessert_images.push(
+      <ImageViewer imgSource={image} />
+    )
+  }
+
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Text style={styles.text}>I love cookies</Text>
-    </View>
+      {dessert_images}
+    </ScrollView>
   );
 }
 

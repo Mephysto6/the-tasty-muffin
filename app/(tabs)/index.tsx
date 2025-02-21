@@ -5,7 +5,7 @@ import ImageViewer from "@/components/ImageViewer";
 import Button from "@/components/Button";
 import React, { useEffect } from "react";
 // import { Link as scrollLink, animateScroll as scroll } from "react-scroll";
-import { DessertPathList, DessertImgList } from "@/assets/images/desserts/index"
+import { DessertsList, DessertImgList } from "@/assets/images/desserts/index"
 import DessertImage from "@/components/DessertImage"
 
 // const path = "@/assets/images/react-logo.png" ;
@@ -17,9 +17,9 @@ export default function Index() {
   }, []);
 
   const dessert_images = [] ;
-  for (let i=0 ; i < DessertPathList.length ; i++) {
+  for (var i in DessertsList) {
     dessert_images.push(
-      <DessertImage name={DessertPathList[i]} image={DessertImgList[i]} />
+      <DessertImage name={DessertsList[i]} image={DessertImgList[i]} />
     )
   }
 

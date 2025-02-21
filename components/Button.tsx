@@ -2,6 +2,7 @@ import { StyleSheet, View, Pressable, Text } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { styles } from "@/global";
 import { DessertTags } from "@/assets/images/desserts"
+import { SelectTag } from "@/app/(tabs)/search"
 
 type Props = {
     label: string;
@@ -10,15 +11,15 @@ type Props = {
     selected?: boolean ;
 };
 
-function SelectTag(label: string, selected: boolean) {
-  selected = !selected
-}
+// function SelectTag(label: string, selected: boolean) {
+//   selected = !selected
+// }
 
 export default function Button({ label, theme, selected = false }: Props) {
   if (theme === "tag") {
     return (
       <View style={styles.tagContainer}>
-        <Pressable style={styles.tagButton} onPress={() => SelectTag(label, selected)}>
+        <Pressable style={styles.tagButton} onPress={() => SelectTag(label)}>
           <Text style={styles.tagLabel}>{label}</Text>
           <Text>selected : {selected}</Text>
         </Pressable>

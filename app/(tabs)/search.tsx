@@ -1,30 +1,35 @@
 import { Text, View, StyleSheet, ScrollView } from "react-native";
 import { Link } from "expo-router";
 import { styles } from "@/global" ;
-import { DessertPathList, DessertImgList, AllTags } from "@/assets/images/desserts/index"
+import { DessertsList, DessertImgList, AllTags } from "@/assets/images/desserts/index"
 import DessertButton from "@/components/DessertButton"
 import Button from "@/components/Button"
 
 export var tagDict = new Map<string,boolean>() ;
 
+export function SelectTag(tag: string) {
+  var currentTagStatus = tagDict.get(tag) || false
+  tagDict.set(tag, !currentTagStatus)
+}
+
 export default function Search() {
 
-  console.log("\n\n --- DessertPathList received, length : " + DessertPathList.length) ;
+  console.log("\n\n --- DessertPathList received, length : " + DessertsList.length) ;
 
   var dessert_list = [] ;
-  for (let i=0 ; i < DessertPathList.length ; i++) {
+  for (var dessert of DessertsList) {
     dessert_list.push(
-      <DessertButton name={DessertPathList[i]}/>
+      <DessertButton name={dessert}/>
     )
   }
   console.log("\n\n --- dessert_list built, length : " + dessert_list.length) ;
 
   var tag_list = [] ;
-  for (let i=0 ; i < AllTags.length ; i++) {
+  for (var tag of AllTags) {
     tag_list.push(
-      <Button label={AllTags[i]} theme="tag"/>
+      <Button label={tag} theme="tag"/>
     )
-    tagDict.set(AllTags[i], false) ;
+    tagDict.set(tag, false) ;
   }
   console.log("\n\n --- tag_list built, length : " + tag_list.length) ;
 

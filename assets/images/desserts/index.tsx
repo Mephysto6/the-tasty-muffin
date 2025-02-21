@@ -1,3 +1,10 @@
+import { ImageSource } from 'expo-image';
+
+import { testing_cookies, CookiesImgs } from "./cookies"
+import { MuffinsImgs } from "./muffins"
+// export const images_cookies : Array<ImageSource>;
+console.log("testing_cookies : " + testing_cookies) ;
+
 // export each image
 // TODO replace with import the list from each folder
 //  + in each folder, import all images (with import all functions below)
@@ -11,13 +18,13 @@ export var DessertTags = new Map<string, string[]>();
 DessertTags.set("cookies", ["individual", "transportable"]) ;
 DessertTags.set("muffins", ["individual", "fillings"]) ;
 
-export const DessertPathList = Array.from( DessertTags.keys() ) ;
+export const DessertsList = Array.from( DessertTags.keys() ) ;
 // DessertPathList will look like ["cookies", "muffins"]
 
 const AllTags: string[] = [] ;
 // console.log("\n\n -- DessertTestList :" + DessertPathList)
-for (let i = 0 ; i < DessertPathList.length ; i++) {
-    const one_dessert : string = DessertPathList[i];
+for (let i = 0 ; i < DessertsList.length ; i++) {
+    const one_dessert : string = DessertsList[i];
     const one_dessert_tag_list = DessertTags.get(one_dessert);
     // console.log("\n\n -- i :" + i)
     // console.log("\n\n -- DessertTestList[i] : " + DessertPathList[i] + "\n should be the dessert")
