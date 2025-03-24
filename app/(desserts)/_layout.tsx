@@ -39,16 +39,17 @@ export function ReturnFunction(
   
           {/* images on the left */}
           <View style={styles.container}>
-            <ScrollView style={styles.dessertImageList}>
-              {img_list}
+            <ScrollView>
+              <View style={styles.dessertImageList}>
+                {img_list}
+              </View>
             </ScrollView>
           </View>
-  
+
           {/* ingredients on the right */}
           <View>
             <ScrollView>
               <Text style={[styles.dessertIngredients, styles.text]}>
-                {/*  */}
                 {Show_Ingredients(ingredients)}
               </Text>
             </ScrollView>

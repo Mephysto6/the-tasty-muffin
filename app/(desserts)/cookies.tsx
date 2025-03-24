@@ -22,7 +22,7 @@ export default function Cookies() {
 
   // dessert_images2 is a map result of all the images
   const dessert_images2 = Images.map(image =>
-    <ImageViewer imgSource={image} />
+    <div><ImageViewer imgSource={image} /></div>
   )
 
   return ReturnFunction(Title, Ingredients, dessert_images2);

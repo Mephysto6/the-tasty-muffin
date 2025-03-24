@@ -35,11 +35,12 @@ export const styles = StyleSheet.create({
     // alignItems: "center",
   },
   dessertImageList: {
-    flex:1,
-    flexDirection: "column",
+    display: "flex",
+    flexWrap: "wrap",
+    flexDirection: "row",
     // justifyContent: "center",
     // alignItems: "center",
-    // marginRight: 200,
+    padding: 20,
   },
   dessertIngredients: {
     // justifyContent: "center",
@@ -47,11 +48,18 @@ export const styles = StyleSheet.create({
     // marginRight: 100,
   },
   image: {
-    width: 400,
-    height: 400,
+    width: 300,
+    height: 300,
     borderRadius: 18,
     textAlign: "center",
     margin: 10,
+  },
+
+// debugging
+  borders: {
+    borderStyle: "solid",
+    borderWidth: 5,
+    borderColor: "red",
   },
 
   // buttons
