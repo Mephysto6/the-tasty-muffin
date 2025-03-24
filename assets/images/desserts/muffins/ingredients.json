@@ -1,0 +1,11 @@
+{
+    "Base" : ["farine", "beurre", "sucre", "oeuf", "lait", "levure"],
+    "Variations" : [
+        "farine d'amande",
+        "farine de noisette",
+        "farine de noix de coco",
+        "chocolats (noir, lait, ou blanc)",
+        "fruits à coque (cerneaux de noix, macadamia, cajou, etc)",
+        "fruits (framboise, cerise, myrtille, etc)"
+    ]
+}

@@ -1,25 +1,30 @@
 import { Text, View, StyleSheet, ScrollView } from "react-native";
 import { styles } from "@/global" ;
-import { testing_cookies, CookiesImgs } from "@/assets/images/desserts/cookies" ;
+import { Images, Ingredients, Title } from "@/assets/images/desserts/cookies" ;
 import DessertImage from "@/components/DessertImage";
 import ImageViewer from "@/components/ImageViewer";
+import { ReturnFunction } from "@/app/(desserts)/_layout"
 
+function UnpackArray(packedList: Array<any>) {
 
+  return
+}
 
 export default function Cookies() {
   
+  // dessert_images is an Array of all the images
   var dessert_images : Array<any> = [];
-  for (var image of CookiesImgs) {
+  for (var image of Images) {
     dessert_images.push(
       <ImageViewer imgSource={image} />
     )
   }
 
-  return (
-    <ScrollView style={styles.container}>
-      <Text style={styles.text}>I love cookies</Text>
-      {dessert_images}
-    </ScrollView>
-  );
+  // dessert_images2 is a map result of all the images
+  const dessert_images2 = Images.map(image =>
+    <ImageViewer imgSource={image} />
+  )
+
+  return ReturnFunction(Title, Ingredients, dessert_images2);
 }
 

@@ -3,6 +3,7 @@ import { styles } from "@/global" ;
 import { MuffinsImgs } from "@/assets/images/desserts/muffins" ;
 import DessertImage from "@/components/DessertImage";
 import ImageViewer from "@/components/ImageViewer";
+import { ReturnFunction } from "@/app/(desserts)/_layout"
 
 export default function Muffins() {
 

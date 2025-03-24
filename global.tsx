@@ -13,6 +13,11 @@ export const styles = StyleSheet.create({
     fontSize: 44,
     textAlign: "center",
   },
+  page_title: {
+    color: "#49f",
+    fontSize: 30,
+    textAlign: "center",
+  },
   text: {
     color: "#fff",
     fontSize: 20,
@@ -23,12 +28,33 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  dessertContainer: {
+    flex: 2,
+    flexDirection: "row",
+    // justifyContent: "center",
+    // alignItems: "center",
+  },
+  dessertImageList: {
+    flex:1,
+    flexDirection: "column",
+    // justifyContent: "center",
+    // alignItems: "center",
+    // marginRight: 200,
+  },
+  dessertIngredients: {
+    // justifyContent: "center",
+    // alignItems: "center",
+    // marginRight: 100,
+  },
   image: {
     width: 400,
     height: 400,
     borderRadius: 18,
     textAlign: "center",
+    margin: 10,
   },
+
+  // buttons
   buttonContainer: {
     width: 320,
     height: 68,
