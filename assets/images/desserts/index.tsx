@@ -1,9 +1,9 @@
 import { ImageSource } from 'expo-image';
 
-import { testing_cookies, CookiesImgs } from "./cookies"
-import { MuffinsImgs } from "./muffins"
+// import { testing_cookies, CookiesImgs } from "./cookies"
+// import { MuffinsImgs } from "./muffins"
 // export const images_cookies : Array<ImageSource>;
-console.log("testing_cookies : " + testing_cookies) ;
+// console.log("testing_cookies : " + testing_cookies) ;
 
 // export each image
 // TODO replace with import the list from each folder

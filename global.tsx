@@ -1,5 +1,23 @@
 import { StyleSheet } from "react-native";
 
+export const colours = {
+  "white" : "#fff",
+  "lightgrey" : "#555",
+  "grey" : "#333",
+  "specgrey" : "#25292e",
+  "darkgrey" : "#222",
+  "black" : "#000",
+
+  "skyblue" : "#8df",
+  "blue" : "#49f",
+  "slateblue" : "#549",
+  "royalblue" : "#47e",
+  "medblue" : "#11d",
+  "navyblue" : "#008",
+  "nightblue" : "#003",
+  "indigo" : "#317",
+} ;
+
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -9,17 +27,17 @@ export const styles = StyleSheet.create({
     // paddingHorizontal : 200,
   },
   title: {
-    color: "#49f",
+    color: colours["blue"],
     fontSize: 44,
     textAlign: "center",
   },
   page_title: {
-    color: "#49f",
+    color: colours["blue"],
     fontSize: 30,
     textAlign: "center",
   },
   text: {
-    color: "#fff",
+    color: colours["white"],
     fontSize: 20,
     textAlign: "center",
   },
@@ -74,7 +92,7 @@ export const styles = StyleSheet.create({
   buttonS: {
     fontSize: 20,
     textDecorationLine: "underline",
-    color: "#fff",
+    color: colours["white"],
     textAlign: "center",
   },
   buttonM: {
@@ -86,10 +104,10 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     textAlign: "center",
     flexDirection: "row",
-    color: "#ccc",
+    color: colours["grey"],
   },
   buttonLabel: {
-    color: "#fff",
+    color: colours["white"],
     fontSize: 16,
   },
   buttonIcon: {
@@ -115,7 +133,7 @@ export const styles = StyleSheet.create({
     textAlign: "center",
   },
   tagLabel: {
-    color: "#fff",
+    color: colours["white"],
     fontSize: 16,
   },
 });

@@ -1,8 +1,10 @@
+import ImageViewer from "@/components/ImageViewer";
+import { styles } from "@/global";
 import { Stack } from "expo-router";
-import { Text, View, StyleSheet, ScrollView } from "react-native";
-import { styles } from "@/global" ;
+import { ScrollView, Text, View } from "react-native";
 
 export default function RootLayout() {
+  // The list of all dessert pages
   return (
     <Stack>
       <Stack.Screen name="cookies" options={{ title: "Cookies" }} />
@@ -22,11 +24,15 @@ export function Show_Ingredients(ingredients: {Base: string[]; Variations: strin
     ingredient_list += base_ingr + "\n";
   }
   return ingredient_list
+  // Todo : move optional ingredients next to the base ingredient they are replacing
 }
 
 export function ReturnFunction(
-  title: string, ingredients: {Base: string[]; Variations: string[];}, img_list: Array<any>
+  title: string, ingredients: {Base: string[]; Variations: string[];}, raw_img_list: Array<any>
 ) {
+  const img_list = raw_img_list.map(image =>
+    <div><ImageViewer imgSource={image} /></div>
+  )
   return (
     <View style={styles.container}>
   
